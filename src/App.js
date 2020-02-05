@@ -6,6 +6,7 @@ import Article from "./Components/Article";
 import ArticlesList from "./Components/ArticlesList";
 import Topics from "./Components/Topics";
 import Topic from "./Components/Topic";
+import Comments from "./Components/Comments";
 import "./CSS/App.css";
 import { Router } from "@reach/router";
 
@@ -18,9 +19,9 @@ function App() {
         <Home path="/" />
         <Article path="/articles/:id" />
         <ArticlesList path="/articles" />
+        <Comments path="/articles/:id/comments" />
         <Topics path="/topics/" />
         <Topic path="/topics/:topic" />
-        {/* Need new URL for each topic? template literals? */}
       </Router>
     </div>
   );

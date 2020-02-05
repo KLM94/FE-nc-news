@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-// import axios from "axios";
 import ArticlesList from "./ArticlesList";
-// import "./CSS/App.css";
 // import { getArticles } from "../Api";
 
 // const Topic -> display articles by topic
@@ -21,11 +19,6 @@ class Topic extends Component {
   //       })
   //       .catch(err => console.dir(err));
   //   }
-
-  // GET PAGE FULL OF TITLES - WORK FROM THERE
-  // GET RE-INTRODUCE LINK
-  // MAKE ARTICLES LIST API MORE REUSABLE AND ALMOST SAME
-  // TEMPLATE LITERALS ON URL FOR QUERY
 
   render() {
     return (

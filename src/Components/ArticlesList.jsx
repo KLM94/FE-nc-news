@@ -23,7 +23,7 @@ class ArticlesList extends Component {
           <div className="article" key={article.title}>
             <span className="article-author-and-date">
               <em>
-                {`Published by ${article.author} on the ${new Date(
+                {`Published by ${article.author} on ${new Date(
                   article.created_at
                 ).toLocaleDateString()}`}
               </em>
@@ -35,7 +35,7 @@ class ArticlesList extends Component {
               <p> {article.body} </p>
             </div>
             <Link
-              to={`/articles/${article.article_id}`}
+              to={`/articles/${article.article_id}`} // ????
               className="nav-element"
             >
               View Full Article
