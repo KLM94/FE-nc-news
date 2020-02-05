@@ -1,21 +1,31 @@
 import React, { Component } from "react";
 import { getArticle } from "../Api";
+import Comments from "./Comments";
 
 class Article extends Component {
   state = {
-    article: {}
+    article: {},
+    isLoading: true
   };
 
   componentDidMount() {
     getArticle(this.props.id)
       .then(response => {
-        this.setState({ article: response.data.article });
+        this.setState({ article: response.data.article, isLoading: false });
       })
       .catch(err => console.dir(err));
+
+    // getComments() {
+    //   getComments().then(response => {
+    //     this.s
+    //   })
+    // }
   }
 
   render() {
-    const { article } = this.state;
+    const { article, isLoading } = this.state;
+    console.log(article.article_id);
+    if (isLoading) return <p>Loading...</p>;
     return (
       <div className="full-article">
         <p>{`You are now viewing articles for ${article.topic}`}</p>
@@ -25,7 +35,8 @@ class Article extends Component {
         ).toLocaleDateString()}`}
         <p>{article.body}</p>
         <p>{`Votes: ${article.votes}`}</p>
-        <p>{` Click here to view ${article.comment_count} comments`}</p>
+        <p>{` Scroll below to view ${article.comment_count} comments`}</p>
+        <Comments article_id={article.article_id} />
       </div>
     );
   }

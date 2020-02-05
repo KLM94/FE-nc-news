@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { getComments, getArticle } from "../Api";
-import { Link } from "@reach/router";
+import { getComments } from "../Api";
 
 class Comments extends Component {
   state = {
@@ -8,13 +7,10 @@ class Comments extends Component {
   };
 
   componentDidMount() {
-    getArticle(this.prop.id).then(response => {
-      console.log(response.data, "hereeeee");
-    });
-    getComments(this.props.comments)
-      .then(response => {
-        console.log(response.body);
-        this.setState({ comments: response.data.body });
+    getComments(this.props.article_id)
+      .then(comments => {
+        console.log(comments);
+        this.setState({ comments });
       })
       .catch(err => console.dir(err));
   }
@@ -22,8 +18,12 @@ class Comments extends Component {
   render() {
     return (
       <div className="comments">
-        <p> Haiii. </p>
-        <Link to={`/articles/${this.props.id}/comments`} />
+        {this.state.comments.map(comment => (
+          <div className="each-comment" key={comment.body}>
+            <h5>{`Comment by ${comment.author}`}</h5>
+            <p>{comment.body}</p>
+          </div>
+        ))}
       </div>
     );
   }

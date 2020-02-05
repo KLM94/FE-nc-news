@@ -79,3 +79,17 @@ body {
   color: white;
   text-align: center;
 }
+
+.votes {
+  border: 1px;
+  color: white;
+}
+.each-comment {
+  padding: 15px;
+  border: 1px solid #e3e3e3;
+  margin: auto;
+  width: 70%;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}

@@ -21,18 +21,19 @@ export const getArticles = topic => {
   );
 };
 
-export const getComments = (comments, id, topic, author, sort_by, order) => {
-  return axios.get(
-    `https://kirstys-nc-news.herokuapp.com/api/articles/${id}/${comments}`,
-    {
+export const getComments = (id, topic, author, sort_by, order) => {
+  return axios
+    .get(`https://kirstys-nc-news.herokuapp.com/api/articles/${id}/comments`, {
       params: {
         topic: topic,
         author: author,
         sort_by: sort_by,
         order: order
       }
-    }
-  );
+    })
+    .then(res => {
+      return res.data.comments;
+    });
 };
 
 // export default { getTopics, getArticles };
