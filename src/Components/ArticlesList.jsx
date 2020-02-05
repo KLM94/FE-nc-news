@@ -19,6 +19,14 @@ class ArticlesList extends Component {
   render() {
     return (
       <div className="articles-list">
+        <div className="drop-down">
+          <p className="sort-by-articles">Sort articles by</p>
+          <select onChange={this.handleChange}>
+            <option value="date-created">date created</option>
+            <option value="comment_count">comment_count</option>
+            <option value="votes">votes</option>
+          </select>
+        </div>
         {this.state.articleData.map(article => (
           <div className="article" key={article.title}>
             <span className="article-author-and-date">
@@ -44,6 +52,11 @@ class ArticlesList extends Component {
         ))}
       </div>
     );
+  }
+
+  handleChange(event) {
+    console.log(event.target);
+    this.setState({ articleData: event.target.value });
   }
 }
 

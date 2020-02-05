@@ -93,3 +93,12 @@ body {
   margin-bottom: 20px;
   margin-top: 10px;
 }
+
+.sort-articles-by {
+  color: white;
+}
+
+.drop-down {
+  margin-left: 180px;
+  color: white;
+}
