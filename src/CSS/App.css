@@ -1,0 +1,81 @@
+body {
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/txture.png");
+}
+
+.header {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin: 5px;
+  /* background-color: rgb(238, 238, 238); */
+  /* border-radius: 30px; */
+  padding-top: 10px;
+}
+
+.nav-bar {
+  text-align: center;
+  padding-top: 10px;
+  /* position: relative;
+  top: 75px; */
+}
+
+.nav-element {
+  padding-right: 30px;
+  color: rgb(245, 144, 114);
+  font-size: large;
+  /* Padding on Articles */
+}
+
+.home-description {
+  text-align: center;
+  color: rgb(245, 144, 114);
+  padding-top: 10px;
+}
+
+.article {
+  padding: 15px;
+  border: 1px solid #e3e3e3;
+  margin: auto;
+  width: 70%;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.article-title {
+  text-align: center;
+  color: rgb(245, 144, 114);
+}
+
+.articles-list {
+  margin-top: 50px;
+}
+
+.all-topics {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-left: 40px;
+  color: white;
+  font-size: 30px;
+}
+
+.topics {
+  color: rgb(245, 144, 114);
+}
+
+.topic-article {
+  color: white;
+  text-align: center;
+}
+
+.topic-header {
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 100px;
+  color: white;
+}
+
+.full-article {
+  color: white;
+  text-align: center;
+}
