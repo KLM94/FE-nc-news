@@ -40,7 +40,9 @@ class Topic extends Component {
       //     ))}
       //   </div>
       <div>
-        <h2 className="topic-header"> {this.props.topic} </h2>
+        <h4 className="topic-header">
+          You are viewing articles for {this.props.topic}!{" "}
+        </h4>
         <ArticlesList topic={this.props.topic} />
       </div>
     );

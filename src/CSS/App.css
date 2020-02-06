@@ -32,6 +32,17 @@ body {
   padding-top: 10px;
 }
 
+.go-home {
+  color: white;
+  margin-left: 15px;
+}
+
+.logged-in-as {
+  color: white;
+  text-align: right;
+  margin-right: 20px;
+}
+
 .article {
   padding: 15px;
   border: 1px solid #e3e3e3;
@@ -101,4 +112,8 @@ body {
 .drop-down {
   margin-left: 180px;
   color: white;
+}
+
+.topic-name {
+  text-align: right;
 }

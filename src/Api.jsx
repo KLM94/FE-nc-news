@@ -15,9 +15,9 @@ export const getArticle = (id, topic, author, sort_by, order) => {
   });
 };
 
-export const getArticles = topic => {
+export const getArticles = (topic, sortBy) => {
   return axios.get(
-    `https://kirstys-nc-news.herokuapp.com/api/articles?topic=${topic}`
+    `https://kirstys-nc-news.herokuapp.com/api/articles?topic=${topic}&sort_by=${sortBy}`
   );
 };
 

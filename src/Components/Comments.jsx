@@ -9,7 +9,6 @@ class Comments extends Component {
   componentDidMount() {
     getComments(this.props.article_id)
       .then(comments => {
-        console.log(comments);
         this.setState({ comments });
       })
       .catch(err => console.dir(err));
