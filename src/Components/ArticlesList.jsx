@@ -18,6 +18,7 @@ class ArticlesList extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    console.log("ho");
     if (this.state.sortBy !== prevState.sortBy) {
       getArticles(this.props.topic, this.state.sortBy)
         .then(response => {
@@ -43,7 +44,7 @@ class ArticlesList extends Component {
           </select>
         </div>
         {this.state.articleData.map(article => (
-          <div className="article" key={article.title}>
+          <div className="article" key={article.article_id}>
             <span className="article-author-and-date">
               <em>
                 {`Published by ${article.author} on ${new Date(

@@ -27,7 +27,7 @@ class Article extends Component {
     // console.log(article.article_id);
     if (isLoading) return <p>Loading...</p>;
     return (
-      <div className="full-article">
+      <div className="full-article" key="article">
         <p>{`You are now viewing articles for ${article.topic}`}</p>
         <h2> {article.title} </h2>
         {`Published by ${article.author} on ${new Date(

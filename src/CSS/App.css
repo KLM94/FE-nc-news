@@ -105,6 +105,10 @@ body {
   margin-top: 10px;
 }
 
+.submit {
+  border-color: rgb(245, 144, 114);
+}
+
 .sort-articles-by {
   color: white;
 }
