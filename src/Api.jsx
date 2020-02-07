@@ -36,6 +36,18 @@ export const getComments = (id, topic, author, sort_by, order) => {
     });
 };
 
+export const postComment = (requestBody, id) => {
+  return axios
+    .post(
+      `https://kirstys-nc-news.herokuapp.com/api/articles/${id}/comments`,
+      requestBody
+    )
+    .then(({ data }) => {
+      console.log(data);
+      return data.comment;
+    });
+};
+
 // export default { getTopics, getArticles };
 
 // module.exports = getArticles;

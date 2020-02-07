@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import { postComment } from "../Api";
 
 class AddComment extends Component {
   state = {
-    newComment: ""
+    username: "weegembump",
+    body: ""
   };
 
   render() {
@@ -12,28 +14,31 @@ class AddComment extends Component {
           rows="8"
           cols="80"
           placeholder="Type your comment here!"
+          value={this.state.value}
+          onChange={e => this.handleChange(e.target.value)}
         ></textarea>
         <form onSubmit={this.handleSubmit}>
-          <input
-            type="submit"
-            onChange={this.handleChange}
-            value="Post"
-          ></input>
+          <input type="submit" value="Post"></input>
         </form>
       </div>
     );
   }
 
   handleSubmit = event => {
-    const { newComment } = this.state;
     event.preventDefault();
-    this.props.addNewComment(newComment);
-    this.setState({ newComment: "" });
+    const { username, body } = this.state;
+    const { articleId } = this.props;
+    this.setState({ body: "" });
+    postComment({ username: username, body: body }, articleId).then(
+      newComment => {
+        console.log(newComment);
+        this.props.addNewComment(newComment);
+      }
+    );
   };
 
-  handleChange = event => {
-    console.log(event.target.value);
-    this.setState({ newComment: event.target.value });
+  handleChange = comment => {
+    this.setState({ body: comment });
   };
 }
 

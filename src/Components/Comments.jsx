@@ -18,14 +18,17 @@ class Comments extends Component {
 
   addNewComment = addNewComment => {
     this.setState(currentState => {
-      return { comments: [...currentState.comments, addNewComment] };
+      return { comments: [addNewComment, ...currentState.comments] };
     });
   };
 
   render() {
     return (
       <div className="comments">
-        <AddComment addNewComment={this.addNewComment} />
+        <AddComment
+          addNewComment={this.addNewComment}
+          articleId={this.props.article_id}
+        />
         {this.state.comments.map(comment => (
           <div className="each-comment" key={comment.comment_id}>
             <h5>{`Comment by ${comment.author}`}</h5>

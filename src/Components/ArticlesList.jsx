@@ -18,7 +18,6 @@ class ArticlesList extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log("ho");
     if (this.state.sortBy !== prevState.sortBy) {
       getArticles(this.props.topic, this.state.sortBy)
         .then(response => {

@@ -24,7 +24,6 @@ class Article extends Component {
 
   render() {
     const { article, isLoading } = this.state;
-    // console.log(article.article_id);
     if (isLoading) return <p>Loading...</p>;
     return (
       <div className="full-article" key="article">
