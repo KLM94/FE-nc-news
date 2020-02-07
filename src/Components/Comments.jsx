@@ -31,7 +31,9 @@ class Comments extends Component {
         />
         {this.state.comments.map(comment => (
           <div className="each-comment" key={comment.comment_id}>
-            <h5>{`Comment by ${comment.author}`}</h5>
+            <h5>{`Comment by ${comment.author} on ${new Date(
+              comment.created_at
+            ).toLocaleDateString()}`}</h5>
             <p>{comment.body}</p>
           </div>
         ))}

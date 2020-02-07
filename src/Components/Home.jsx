@@ -1,12 +1,15 @@
 import React from "react";
 import ArticlesList from "./ArticlesList";
+// import Loading from "./Loading";
 
-const Home = () => {
+const Home = props => {
+  // const { isLoading } = this.state;
   return (
     <div className="home">
-      <p className="home-description">
-        Welcome to NC News, navigate and enjoy!
-      </p>
+      <div className="home-description">
+        {`Welcome to NC News ${props.username}, navigate and enjoy!`}
+        {/* name undefined */}
+      </div>
 
       <ArticlesList />
     </div>

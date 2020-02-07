@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { getArticle } from "../Api";
 import Comments from "./Comments";
+import Loading from "./Loading";
 
 class Article extends Component {
   state = {
@@ -14,17 +15,11 @@ class Article extends Component {
         this.setState({ article: response.data.article, isLoading: false });
       })
       .catch(err => console.dir(err));
-
-    // getComments() {
-    //   getComments().then(response => {
-    //     this.s
-    //   })
-    // }
   }
 
   render() {
     const { article, isLoading } = this.state;
-    if (isLoading) return <p>Loading...</p>;
+    if (isLoading) return <Loading />;
     return (
       <div className="full-article" key="article">
         <p>{`You are now viewing articles for ${article.topic}`}</p>
