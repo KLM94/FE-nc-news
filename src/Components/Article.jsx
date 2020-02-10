@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { getArticle } from "../Api";
 import Comments from "./Comments";
 import Loading from "./Loading";
+import styles from "../CSS/Article.module.css";
 
 class Article extends Component {
   state = {
@@ -21,7 +22,7 @@ class Article extends Component {
     const { article, isLoading } = this.state;
     if (isLoading) return <Loading />;
     return (
-      <div className="full-article" key="article">
+      <div className={styles.fullarticle} key="article">
         <p>{`You are now viewing articles for ${article.topic}`}</p>
         <h2> {article.title} </h2>
         {`Published by ${article.author} on ${new Date(

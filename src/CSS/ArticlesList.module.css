@@ -1,0 +1,29 @@
+@import "https://fonts.googleapis.com/css?family=Raleway";
+
+.sortarticlesby {
+  color: white;
+  font-family: Raleway;
+}
+
+.articleslist {
+  font-family: Raleway;
+  color: white;
+  margin-top: 50px;
+}
+
+.article {
+  padding: 15px;
+  border: 1px solid #e3e3e3;
+  margin: auto;
+  width: 70%;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-family: Raleway;
+}
+
+.articletitle {
+  text-align: center;
+  color: rgb(245, 144, 114);
+  font-family: Raleway;
+}

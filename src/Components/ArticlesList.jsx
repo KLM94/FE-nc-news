@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { getArticles } from "../Api";
 import { Link } from "@reach/router";
+import styles from "../CSS/ArticlesList.module.css";
 
 class ArticlesList extends Component {
   state = {
@@ -33,9 +34,9 @@ class ArticlesList extends Component {
 
   render() {
     return (
-      <div className="articles-list">
-        <div className="drop-down">
-          <p className="sort-by-articles">Sort articles by</p>
+      <div className={styles.articleslist}>
+        <div className={styles.dropdown}>
+          <div className={styles.sortbyarticles}>Sort articles by</div>
           <select onChange={this.handleChange}>
             <option value="created_at">Date Created</option>
             <option value="comment_count">Comment Count</option>
@@ -43,8 +44,8 @@ class ArticlesList extends Component {
           </select>
         </div>
         {this.state.articleData.map(article => (
-          <div className="article" key={article.article_id}>
-            <span className="article-author-and-date">
+          <div className={styles.article} key={article.article_id}>
+            <span className={styles.articleauthoranddate}>
               <em>
                 {`Published by ${article.author} on ${new Date(
                   article.created_at
@@ -52,13 +53,13 @@ class ArticlesList extends Component {
               </em>
             </span>
 
-            <div className="article-title">
+            <div className={styles.articletitle}>
               <h2> {article.title} </h2>
             </div>
-            <div className="article-body">
+            <div className={styles.articlebody}>
               <p> {article.body} </p>
             </div>
-            <div className="article-votes">
+            <div className={styles.articlevotes}>
               <p> Votes: {article.votes}</p>
             </div>
             <Link

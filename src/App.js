@@ -14,6 +14,10 @@ class App extends Component {
     loggedInUser: "weegembump"
   };
 
+  selectUser = loggedInUser => {
+    this.setState({ loggedInUser: loggedInUser });
+  };
+
   render() {
     const { loggedInUser } = this.state;
     return (
@@ -21,7 +25,7 @@ class App extends Component {
         <Header
           title="NC News"
           loggedInUser={loggedInUser}
-          userLogin={this.userLogin}
+          selectUser={this.selectUser}
         ></Header>
         <Navbar />
         <Router>
@@ -34,9 +38,6 @@ class App extends Component {
       </div>
     );
   }
-  userLogin = event => {
-    this.setState({ loggedInUser: event.target.value });
-  };
 }
 
 export default App;

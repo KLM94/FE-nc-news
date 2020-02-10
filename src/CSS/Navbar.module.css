@@ -1,0 +1,55 @@
+@import "https://fonts.googleapis.com/css?family=Raleway";
+
+.navbar {
+  text-align: center;
+  border-style: ridge;
+  border-color: rgb(255, 255, 255);
+  background-color: rgb(245, 144, 114);
+  padding: 10px;
+  font-weight: lighter;
+  margin-bottom: 5px;
+}
+
+.navelement {
+  padding-right: 30px;
+  color: rgb(0, 0, 0);
+  font-size: large;
+  font-family: Raleway;
+  margin-top: 0 auto;
+  padding: 2em;
+  text-align: center;
+  /* text-shadow: 2px 1px black; */
+}
+
+.navelement:hover {
+  background-color: #ffffff17;
+  padding: 5px;
+  /* transition: all 0.4s ease-in-out; */
+}
+
+/* div.brackets a:before,
+div.brackets a:after {
+  position: absolute;
+  opacity: 0;
+  font-size: 35px;
+  top: 0px;
+  transition: all 0.3s;
+}
+
+div.brackets a:before {
+  content: "(";
+  left: 0px;
+  transform: translateX(10px);
+}
+
+div.brackets a:after {
+  content: ")";
+  right: 0px;
+  transform: translateX(-10px);
+}
+
+div.brackets a:hover:before,
+div.brackets a:hover:after {
+  opacity: 1;
+  transform: translateX(0px);
+}  */

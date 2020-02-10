@@ -10,14 +10,16 @@ class AddComment extends Component {
   render() {
     return (
       <div className="comments">
-        <textarea
-          rows="8"
-          cols="80"
-          placeholder="Type your comment here!"
-          value={this.state.value}
-          onChange={e => this.handleChange(e.target.value)}
-        ></textarea>
         <form onSubmit={this.handleSubmit}>
+          <br></br>
+          <textarea
+            rows="8"
+            cols="80"
+            placeholder="Type your comment here!"
+            value={this.state.body}
+            onChange={e => this.handleChange(e.target.value)}
+            required
+          ></textarea>
           <input type="submit" value="Post"></input>
         </form>
       </div>

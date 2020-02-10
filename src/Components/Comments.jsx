@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getComments } from "../Api";
+import { getComments, deleteComment } from "../Api";
 import AddComment from "./AddComment";
 
 class Comments extends Component {
@@ -14,7 +14,6 @@ class Comments extends Component {
       })
       .catch(err => console.dir(err));
   }
-  // the only place you can add the comments -> setstate
 
   addNewComment = addNewComment => {
     this.setState(currentState => {
@@ -22,7 +21,18 @@ class Comments extends Component {
     });
   };
 
+  handleDelete = comment_id => {
+    const { comments } = this.state;
+    deleteComment(comment_id);
+    const filteredComments = comments.filter(
+      comment => comment.comment_id !== comment_id
+    );
+    this.setState({ comments: filteredComments });
+  };
+
   render() {
+    //const { handleDelete } = this.props;
+    // if (this.state.comments > 0) {
     return (
       <div className="comments">
         <AddComment
@@ -35,10 +45,18 @@ class Comments extends Component {
               comment.created_at
             ).toLocaleDateString()}`}</h5>
             <p>{comment.body}</p>
+            <button
+              className="delete-button"
+              onClick={() => this.handleDelete(comment.comment_id)}
+            >
+              Delete comment
+            </button>
           </div>
         ))}
       </div>
     );
+    // }
+    // return "There are no comments associated with this article yet.";
   }
 }
 

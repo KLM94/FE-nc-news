@@ -1,70 +1,11 @@
 body {
-  background-color: #000000;
+  background-color: black;
   background-image: url("https://www.transparenttextures.com/patterns/txture.png");
 }
 
 .loading {
   color: white;
   font-size: larger;
-}
-
-.header {
-  text-align: center;
-  color: rgb(255, 255, 255);
-  margin: 5px;
-  /* background-color: rgb(238, 238, 238); */
-  /* border-radius: 30px; */
-  padding-top: 10px;
-}
-
-.nav-bar {
-  text-align: center;
-  padding-top: 10px;
-  /* position: relative;
-  top: 75px; */
-}
-
-.nav-element {
-  padding-right: 30px;
-  color: rgb(245, 144, 114);
-  font-size: large;
-  /* Padding on Articles */
-}
-
-.home-description {
-  text-align: center;
-  color: rgb(245, 144, 114);
-  padding-top: 10px;
-}
-
-.go-home {
-  color: white;
-  margin-left: 15px;
-}
-
-.logged-in-as {
-  color: white;
-  text-align: right;
-  margin-right: 20px;
-}
-
-.article {
-  padding: 15px;
-  border: 1px solid #e3e3e3;
-  margin: auto;
-  width: 70%;
-  color: white;
-  margin-bottom: 20px;
-  margin-top: 10px;
-}
-
-.article-title {
-  text-align: center;
-  color: rgb(245, 144, 114);
-}
-
-.articles-list {
-  margin-top: 50px;
 }
 
 .all-topics {

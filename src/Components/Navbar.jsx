@@ -1,19 +1,20 @@
 import React from "react";
 import { Link } from "@reach/router";
+import styles from "../CSS/Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <nav className="nav-bar">
-      <Link to="/" className="nav-element">
-        Home
+    <div className={styles.navbar}>
+      <Link to="/" className={styles.navelement}>
+        HOME
       </Link>
-      <Link to="/topics" className="nav-element">
-        Topics
+      <Link to="/topics" className={styles.navelement}>
+        TOPICS
       </Link>
-      <Link to="/articles" className="nav-element">
-        Articles
+      <Link to="/articles" className={styles.navelement}>
+        ARTICLES
       </Link>
-    </nav>
+    </div>
   );
 };
 

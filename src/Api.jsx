@@ -48,6 +48,15 @@ export const postComment = (requestBody, id) => {
     });
 };
 
+export const deleteComment = comment_id => {
+  return axios
+    .delete(`https://kirstys-nc-news.herokuapp.com/api/comments/${comment_id}`)
+    .then(response => {
+      console.log(response);
+      return response.data;
+    });
+};
+
 // export default { getTopics, getArticles };
 
 // module.exports = getArticles;
